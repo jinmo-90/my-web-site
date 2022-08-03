@@ -58,7 +58,10 @@
                             <br/>
                             사용자가 원하는 웹 사이트란 웹 사이트의 <span class="b">목적</span>에 맞는 필요한 요소만을 재료로 사용하여 <br/><span class="b">직관적</span>이며 빠르고, 모든 이들이 이용할 수 있는 것이라고 생각합니다.<br/>
                             <br/>
-                            현실에 안주하지 않고 발전해 나가는 개발자가 되기 위해 노력하고 있습니다.<br/>
+                            1년 이라는 기간동안 <span class="b">퍼블리셔</span>로서, 공공기관 전문 <span class="b">웹에이전시</span>에 근무하며 경력을 쌓았습니다.<br/>
+                            이제는 더 나아가 <span class="b">프론트개발자</span>로서 더 많은 경험을 쌓고자 새로운 도전을 하려고 합니다.<br/>
+                            <br/>
+                            현실에 안주하지 않고 늘 발전해 나가는 개발자가 되기 위해 노력하겠습니다.<br/>
                         </p>
                     </div>
                 </div>
@@ -217,7 +220,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="panel">
+                            <li class="panel last">
                                 <div class="panel_inner">  
                                     <h3 class="work_tit"><span class="blind">꿈마루</span></h3>
                                     <div class="desc_box">
@@ -248,8 +251,21 @@
                                 <span>tel. </span> 010-3401-8008
                             </li>
                             <li><span>mail. </span> sonek3003@naver.com</li>
+                            <li><span>address.</span> 경기도 군포시 산본동</li>
                         </ul>
                     </div>
+                    <div class="map_wrap">
+                        <div id="map" class="map"></div>
+                    </div>
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ead2417cd69a726f63ceb44dab9ecb0"></script>
+                    <script>
+                        var mapContainer = document.getElementById('map'),
+                            mapOption = { 
+                                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                                level: 3
+                            };                                              
+                        var map = new kakao.maps.Map(mapContainer, mapOption); 
+                        </script>
                 </div>
             </section>
             <button type="button" class="btn_top"><span class="blind"> 맨위로 가기</span></button>
