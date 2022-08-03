@@ -1,4 +1,40 @@
 $(document).ready(function(){
+    // 네비게이션
+    //모바일
+    $(".nav_m_btn").on("click", function(){
+        if($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this).parents(".header_inner").find(".nav_wrap ").hasClass("active");
+            $(this).parents(".header_inner").find(".nav_wrap ").removeClass("active");
+            $(this).parents(".header_inner").find(".nav_wrap ").stop().fadeOut();
+            $("body").css("overflow","initial");
+        } else {
+            $(this).addClass("active");
+            $(this).parents(".header_inner").find(".nav_wrap ").addClass("active");
+            $(this).parents(".header_inner").find(".nav_wrap ").stop().fadeIn();
+            $("body").css("overflow","hidden");
+        }
+        var nav_btn = $(".nav_wrap li > a");
+        if($(window).width < 768){       
+            $(nav_btn).on("click", function(){
+                $(this).parents(".nav_wrap").hasClass("active");
+                $(this).parents(".nav_wrap").removeClass("active");
+                $(this).parents(".nav_wrap").stop().fadeOut();
+                $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
+                $("body").css("overflow","initial");
+            });
+        }
+        if($(window).resize < 768){
+            $(nav_btn).on("click", function(){
+                $(this).parents(".nav_wrap").hasClass("active");
+                $(this).parents(".nav_wrap").removeClass("active");
+                $(this).parents(".nav_wrap").stop().fadeOut();
+                $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
+                $("body").css("overflow","initial");
+            });
+        }
+    });
+
     //상단 이동 버튼
     $(window).scroll(function(){
         if($(window).scrollTop() > 90) {
@@ -15,6 +51,7 @@ $(document).ready(function(){
             scrollTop : 0
         },500);
     });
+
     // skill
     var box_btn = $(".skill .box_wrap .box > a");
     $(box_btn).on("click",function(){

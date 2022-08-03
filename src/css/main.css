@@ -35,6 +35,9 @@
 .nav_wrap li > a:hover {
 	color:rgba(54,95,160,1);
 }
+.nav_m_btn {
+	display:none;
+}
 .section {
 	padding:40px 0;
 	padding-left:calc((100% - 1300px)/2);
@@ -73,13 +76,68 @@
 		right:20px;
 	}
 }
-@media screen and (max-width:1024px){
-	
-}
 @media screen and (max-width:768px){
-
+	.nav_wrap {
+		display:none;
+	}
+	.nav_wrap.active {
+		display:block;
+	}
+	.nav_m_btn {
+		display:block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 100;
+	}
+	.nav_m_btn.active {
+		top:40px;
+	}
+	.nav_m_btn span {
+		display:block;
+		width:30px;
+		height:3px;
+		border-radius: 30px;
+		background:#000;
+		transition: all .3s;
+	}
+	.nav_m_btn.active span {
+		background: #fff;
+	}
+	.nav_m_btn span:not(:first-of-type){
+		margin-top:5px;
+	}
+	.nav_m_btn.active span:nth-of-type(1) {
+		transform: rotate(45deg);
+	}
+	.nav_m_btn.active span:nth-of-type(2) {
+		display:none;
+	}
+	.nav_m_btn.active span:nth-of-type(3) {
+		transform: rotate(135deg) translate(-5px, 5px);
+	}
+	.nav_wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height:100vh;
+		padding:110px 50px;
+		margin-left:0;
+		background: rgba(0,0,0,0.9);
+	}
+	.nav_wrap ul {
+		flex-wrap:wrap;
+		flex-direction: column;
+	}
+	.nav_wrap ul li:not(:first-of-type) {
+		margin-left:0;
+		margin-top:50px;
+	}
+	.nav_wrap li > a {
+		color:#fff;
+	}
 }
-
 
 /* 인트로 */
 @font-face {
@@ -138,6 +196,7 @@ svg text {
 .profile .txt_wrap p {
 	font-size:18px;
 	line-height: 24px;
+	color:#333;
 }
 .profile .txt_wrap .b {
 	font-weight:600;
@@ -232,7 +291,7 @@ svg text {
 }
 .skill .info_tit {
 	font-size:24px;
-	color:#888;
+	color:#333;
 }
 .skill .descBox li {
 	position: relative;
@@ -240,7 +299,7 @@ svg text {
 	padding-left:10px;
 	font-size:16px;
 	line-height: 24px;
-	color:#888;
+	color:#333;
 }
 .skill .descBox li::before {
 	content:'';
@@ -410,6 +469,7 @@ svg text {
 .work .panel .desc_box li {
 	font-weight:500;
 	font-size:24px;	
+	color:#333;
 }
 .work .panel .desc_box li:not(:last-of-type) {
 	margin-bottom:15px;
