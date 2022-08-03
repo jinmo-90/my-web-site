@@ -65,11 +65,19 @@
 		transform:translateY(-10px);
 	}
 }
+@media screen and (max-width:1400px){
+	.section {
+		padding:40px 20px;
+	}
+	.btn_top {
+		right:20px;
+	}
+}
 @media screen and (max-width:1024px){
 	
 }
 @media screen and (max-width:768px){
-	
+
 }
 
 
@@ -112,9 +120,6 @@ svg text {
 		stroke-width: 0;
 	}
 }
-@media screen and (max-width:1024px){
-	
-}
 
 /* 프로필 */
 .profile {
@@ -137,12 +142,36 @@ svg text {
 .profile .txt_wrap .b {
 	font-weight:600;
 }
+@media screen and (max-width:1400px){
+	.profile .inner {
+		align-items: center;
+	}
+	.profile .txt_wrap p {
+		font-size:16px;
+		line-height: 20px;
+	}
+}
+@media screen and (max-width:1024px){
+	.profile .txt_wrap {
+		padding:0;
+	}
+}
 @media screen and (max-width:768px){
-	
+	.profile .inner {
+		flex-wrap:wrap;
+		justify-content: center;
+	}
+	.profile .inner .img_wrap {
+		margin-right:0;
+		margin-bottom:40px;
+	}
+	.profile .txt_wrap p {
+		font-size: 14px;
+		line-height: 18px;
+	}
 }
 /* 스킬 */
 .skill {
-	height: 650px;
 	background: #e4ecf9;
 }
 .skill .box_wrap {
@@ -169,10 +198,9 @@ svg text {
 .skill .over_wrap {
 	display:none;
 	position: absolute;
-	top:0;
+	top:15px;
 	left:0;
 	width:100%;
-	height:500px;
 	padding:30px;
 }
 .skill .over_wrap::before {
@@ -204,7 +232,7 @@ svg text {
 }
 .skill .info_tit {
 	font-size:24px;
-	color:#fff;
+	color:#888;
 }
 .skill .descBox li {
 	position: relative;
@@ -212,7 +240,7 @@ svg text {
 	padding-left:10px;
 	font-size:16px;
 	line-height: 24px;
-	color:#fff;
+	color:#888;
 }
 .skill .descBox li::before {
 	content:'';
@@ -225,12 +253,48 @@ svg text {
 	border-radius: 50%;
 	background:#888;
 }
-
+@media screen and (max-width:1400px){
+	.skill .box_wrap {
+		max-width: 610px;
+		margin:auto;
+		flex-wrap:wrap;
+	}
+	.skill .box_wrap .box:not(:first-of-type) {
+		margin-left:0;
+	}
+	.skill .box_wrap .box:nth-of-type(n+3) {
+		margin-top:40px;
+	}
+	.skill .box_wrap .box:nth-of-type(2n+2) {
+		margin-left:80px;
+	}
+	.skill .box_wrap li .img {
+		max-width: 265px;
+	}
+}
 @media screen and (max-width:1024px){
 	
 }
 @media screen and (max-width:768px){
-	
+	.skill .info_tit {
+		font-size:20px;
+	}
+	.skill .box_wrap {
+		max-width: 265px;
+	}
+	.skill .box_wrap .box:nth-of-type(n+3) {
+		margin-top:0;
+	}
+	.skill .box_wrap .box:nth-of-type(2n+2) {
+		margin-left:0;
+	}
+	.skill .box_wrap .box:not(:first-of-type) {
+		margin-top:40px;
+	}
+	.skill .descBox li {
+		margin-top:10px;
+		font-size:14px;
+	}
 }
 
 /* Works */
@@ -268,21 +332,20 @@ svg text {
 	
 }
 .work .work_slide .panel:nth-of-type(1) {
-	background: url(../img/img_work_bg_01.jpg) no-repeat top center / 100%;
+	background: url(../img/img_work_bg_01.jpg) no-repeat top center / cover;
 }
 .work .work_slide .panel:nth-of-type(2) {
-	background: url(../img/img_work_bg_02.jpg) no-repeat top center / 100%;
+	background: url(../img/img_work_bg_02.jpg) no-repeat top center / cover;
 }
 .work .work_slide .panel:nth-of-type(3) {
-	background: url(../img/img_work_bg_03.jpg) no-repeat top center / 100%;
+	background: url(../img/img_work_bg_03.jpg) no-repeat top center / cover;
 }
 .work .work_slide .panel:nth-of-type(4) {
-	background: url(../img/img_work_bg_04.jpg) no-repeat top center / 100%;
+	background: url(../img/img_work_bg_04.jpg) no-repeat top center / cover;
 }
 .work .work_slide .panel:nth-of-type(5) {
-	background: url(../img/img_work_bg_05.jpg) no-repeat top center / 100%;
+	background: url(../img/img_work_bg_05.jpg) no-repeat top center / cover;
 }
-
 .work .work_slide .panel_inner {
 	height:731px;
 	padding:40px 0;
@@ -368,11 +431,79 @@ svg text {
 	background:rgb(54 95 160);
 	color:#fff;
 }
+@media screen and (max-width:1400px){
+	.work .section_tit {
+		padding:40px 20px 0;
+	}
+	.work .work_slide .panel_inner {
+		padding:40px 20px;
+	}
+}
 @media screen and (max-width:1024px){
-	
+	.work .panel .desc_box li {
+		font-size:18px;
+	}
+	.work .panel .desc_box li:not(:last-of-type) {
+		margin-bottom: 10px;
+	}
+	.work .panel .desc_box a {
+		font-size:24px;
+	}
 }
 @media screen and (max-width:768px){
-	
+	.work .work_slide .panel:nth-of-type(1) {
+		background: url(../img/img_work_bg_mo_01.jpg) no-repeat top center / cover;
+	}
+	.work .work_slide .panel:nth-of-type(2) {
+		background: url(../img/img_work_bg_mo_02.jpg) no-repeat top center / cover;
+	}
+	.work .work_slide .panel:nth-of-type(3) {
+		background: url(../img/img_work_bg_mo_03.jpg) no-repeat top center / cover;
+	}
+	.work .work_slide .panel:nth-of-type(4) {
+		background: url(../img/img_work_bg_mo_04.jpg) no-repeat top center / cover;
+	}
+	.work .work_slide .panel:nth-of-type(5) {
+		background: url(../img/img_work_bg_mo_05.jpg) no-repeat top center / cover;
+	}
+	.work .work_slide .panel_inner {
+		height:500px;
+		flex-wrap:wrap;
+		justify-content: center;
+	}
+	.work .work_tit::before {
+		width:200px;
+		height:200px;	
+	} 
+	.work .work_slide .panel:nth-of-type(2) .work_tit::after {
+		width: 155px;
+		height: 35px;
+	}
+	.work .work_slide .panel:nth-of-type(3) .work_tit::after {
+		width: 155px;
+		height: 42px;
+	}
+	.work .work_slide .panel:nth-of-type(4) .work_tit::after {
+		width: 155px;
+		height: 35px;
+	}
+	.work .work_slide .panel:nth-of-type(5) .work_tit::after {
+		width: 155px;
+		height: 51px;
+	}
+	.work .work_slide .panel .desc_box {
+		width:100%;
+		text-align: center;
+	}
+	.work .panel .desc_box li {
+		font-size:14px;
+	}
+	.work .panel .desc_box a {
+		width:150px;
+		height:30px;
+		font-size:18px;
+		line-height:28px;
+	}
 }
 
 /* Contact */
@@ -411,4 +542,38 @@ svg text {
 .contact .map_wrap .map {
 	width:100%;
 	height:100%;
+}
+@media screen and (max-width:1400px){
+	.contact .contact_list li {
+		font-size:20px;
+	}
+}
+@media screen and (max-width:1024px){
+	.contact .contact_list li {
+		font-size:16px;
+	}
+	.contact .desc_wrap {
+		width:auto;
+	}
+}
+@media screen and (max-width:768px){
+	.contact .inner {
+		flex-wrap:wrap;
+		justify-content: center;
+	}
+	.contact .desc_wrap {
+		width:100%;
+		margin-left:0;
+		text-align: center;
+	}
+	.contact_list {
+		max-width:300px;
+		margin: 30px auto;
+		text-align: left;
+	}
+	.contact .map_wrap {
+		width:300px;
+		height:300px;
+		margin-left:0;
+	}
 }

@@ -74,6 +74,7 @@ $(document).ready(function(){
             });
             $('.skill .chart' + box_idx).easyPieChart();
         }
+        
     });
 
     // Work
