@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진모's 포트폴리오</title>
+    <!-- 라이브러리 -->
+    <script src="libs/js/jquery-1.10.2.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="libs/js/jquery.easypiechart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/main.css">
+    <!-- JS -->
+    <script src="src/js/main.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_inner">
+                <h1 class="blind">김진모 포트폴리오</h1>
+                <div class="nav_wrap">
+                    <nav>
+                        <ul>
+                            <li><a href="#profile">Profile</a></li>
+                            <li><a href="#skill">Skills</a></li>
+                            <li><a href="#work">Works</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <article class="main">
+            <section class="intro">
+                <svg viewBox="0 0 1320 300">
+                    <text x="50%" y="50%" dy="40px" text-anchor="middle">Kim Jin Mo</text>
+                </svg>
+            </section>
+            <section class="section profile" id="profile">
+                <h2 class="section_tit">Profile</h2>
+                <div class="inner">
+                    <figure class="img_wrap">
+                        <img src="src/img/img_profile.jpg" alt="프로필 사진">
+                    </figure>
+                    <div class="txt_wrap">
+                        <p>
+                            도전과 문제 해결을 좋아하는 개발자 <span class="b">김진모</span> 입니다.<br/>
+                            <br/>
+                            저의 목표는 <span class="b">사용자</span>의 <span class="b">니즈(needs)</span>에 맞는 최적화 된 웹사이트를 만드는 것 입니다.<br/>
+                            <br/>
+                            이를 위해 웹 개발자로서의 안목을 높이고자 <br/> 공부하는 자세로 수 많은 웹 사이트를 접하고,<br/> 코드를 분석하며 제 것으로 만들기 위해 노력 하고 있습니다.<br/>
+                            <br/>
+                            사용자가 원하는 웹 사이트란 웹 사이트의 <span class="b">목적</span>에 맞는 필요한 요소만을 재료로 사용하여 <br/><span class="b">직관적</span>이며 빠르고, 모든 이들이 이용할 수 있는 것이라고 생각합니다.<br/>
+                            <br/>
+                            현실에 안주하지 않고 발전해 나가는 개발자가 되기 위해 노력하고 있습니다.<br/>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="section skill" id="skill">
+                <h2 class="section_tit">Skills</h2>
+                <div class="inner">
+                    <ul class="box_wrap">
+                        <li class="box" data-aos="fade-down" data-aos-anchor=".skill" data-aos-duration="1000">
+                            <a href="#none">
+                                <span class="img">
+                                    <img src="src/img/img_html.png" alt="HTML5">
+                                </span>
+                                <div class="over_wrap">
+                                    <div class="chart chart1" data-percent="95">
+                                        <span class="data">95%</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3 class="info_tit">HTML5</h3>
+                                        <div class="descBox">
+                                            <ul>
+                                                <li>웹 표준에 입각한 효율적인 코드를 설계</li>
+                                                <li>반응형에 맞는 레이아웃 제작</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="box" data-aos="fade-down" data-aos-anchor=".skill" data-aos-duration="1000" data-aos-delay="250">
+                            <a href="#none">
+                                <span class="img">
+                                    <img src="src/img/img_css.png" alt="CSS3">
+                                </span>
+                                <div class="over_wrap">
+                                    <div class="chart chart2" data-percent="95">
+                                        <span class="data">95%</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3 class="info_tit">CSS3</h3>
+                                        <div class="descBox">
+                                            <ul>
+                                                <li>접근성을 용이하게 하는 CSS를 구성</li>
+                                                <li>적절한 애니메이션 효과 표현</li>
+                                                <li>미디어쿼리를 활용한 반응형을 구현</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="box" data-aos="fade-down" data-aos-anchor=".skill" data-aos-duration="1000" data-aos-delay="500">
+                            <a href="#none">
+                                <span class="img">
+                                    <img src="src/img/img_javascript.png" alt="javascript">
+                                </span>
+                                <div class="over_wrap">
+                                    <div class="chart chart3" data-percent="85">
+                                        <span class="data">85%</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3 class="info_tit">Javascript</h3>
+                                        <div class="descBox">
+                                            <ul>
+                                                <li>자바스크립트 기본형식 이해</li>
+                                                <li>기본적인 함수 이해</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="box" data-aos="fade-down" data-aos-anchor=".skill" data-aos-duration="1000" data-aos-delay="750">
+                            <a href="#none">
+                                <span class="img">
+                                    <img src="src/img/img_jquery.png" alt="jquery">
+                                </span>
+                                <div class="over_wrap">
+                                    <div class="chart chart4" data-percent="90">
+                                        <span class="data">90%</span>
+                                    </div>
+                                    <div class="info">
+                                        <h3 class="info_tit">JQuery</h3>
+                                        <div class="descBox">
+                                            <ul>
+                                                <li>다양한 동적 효과 표현</li>
+                                                <li>Element 제어</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>			
+                    </ul>
+                </div>
+            </section>
+            <section class="section work" id="work">
+                <h2 class="section_tit">Works</h2>
+                <div class="inner">
+                    <div class="work_slide_wrap">
+                        <ul class="work_slide">
+                            <li class="panel">
+                                <div class="panel_inner">  
+                                    <h3 class="work_tit"><span class="blind">k-startup</span></h3>
+                                    <div class="desc_box">
+                                        <ul>
+                                            <li>창업진흥원 K-Startup</li>
+                                            <li>2021.06~2021.12(7개월)</li>
+                                            <li> 프로젝트 서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 30%)</li>
+                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                        </ul>                                   <a href="#none" target="_blank">View</a>            
+                                    </div>
+                                   
+                                </div>                     
+                            </li>
+                            <li class="panel">
+                                <div class="panel_inner">  
+                                    <h3 class="work_tit"><span class="blind">기술닥터</span></h3>
+                                    <div class="desc_box">
+                                        <ul>
+                                            <li>기술닥터</li>
+                                            <li>2021.06~2021.10(5개월)</li>
+                                            <li>프로젝트 전반적인 퍼블리싱 담당 ( 프로젝트 담당 비율 : 90% )</li>
+                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li> 
+                                        </ul>
+                                        <a href="#none" target="_blank">View</a>
+                                    </div>                                    
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel_inner">  
+                                    <h3 class="work_tit"><span class="blind">마포복지재단</span></h3>
+                                    <div class="desc_box">
+                                        <ul>
+                                            <li>마포복지재단</li>
+                                            <li>2022.02~2022.04(3개월)</li>
+                                            <li>프로젝트 메인 ,서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 50%)</li>
+                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                        </ul>                                     
+                                        <a href="#none" target="_blank">View</a>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel_inner">  
+                                    <h3 class="work_tit"><span class="blind">경기연구원</span></h3>
+                                    <div class="desc_box">
+                                        <ul>
+                                            <li>경기연구원</li>
+                                            <li>2022.03~2022.08(6개월)</li>
+                                            <li>프로젝트 서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 30%)</li>
+                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                        </ul>
+                                        <a href="#none" target="_blank">View</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel_inner">  
+                                    <h3 class="work_tit"><span class="blind">꿈마루</span></h3>
+                                    <div class="desc_box">
+                                        <ul>
+                                            <li>꿈마루</li>
+                                            <li>2022.05~2022.07(3개월)</li>
+                                            <li>프로젝트 메인 ,서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 50%)</li>
+                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                        </ul>
+                                        <a href="#none" target="_blank">View</a>
+                                    </div>
+                                </div>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section contact" id="contact">
+                <h2 class="section_tit">Contact</h2>
+                <div class="inner">
+                    <span class="img_wrap">
+                        <img src="src/img/img_contact.jpg" alt="">
+                    </span>
+                    <div class="desc_wrap">
+                        <ul class="contact_list">
+                            <li>
+                                <span>tel. </span> 010-3401-8008
+                            </li>
+                            <li><span>mail. </span> sonek3003@naver.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="btn_top"><span class="blind"> 맨위로 가기</span></button>
+        </article>
+    </div>
+    <script>AOS.init();</script>
+</body>
+</html>
