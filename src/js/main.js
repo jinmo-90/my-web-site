@@ -14,26 +14,37 @@ $(document).ready(function(){
             $(this).parents(".header_inner").find(".nav_wrap ").stop().fadeIn();
             $("body").css("overflow","hidden");
         }
-        var nav_btn = $(".nav_wrap li > a");
-        if($(window).width < 768){       
-            $(nav_btn).on("click", function(){
-                $(this).parents(".nav_wrap").hasClass("active");
-                $(this).parents(".nav_wrap").removeClass("active");
-                $(this).parents(".nav_wrap").stop().fadeOut();
-                $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
-                $("body").css("overflow","initial");
-            });
-        }
-        if($(window).resize < 768){
-            $(nav_btn).on("click", function(){
-                $(this).parents(".nav_wrap").hasClass("active");
-                $(this).parents(".nav_wrap").removeClass("active");
-                $(this).parents(".nav_wrap").stop().fadeOut();
-                $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
-                $("body").css("overflow","initial");
-            });
-        }
     });
+    var nav_btn = $(".nav_wrap li > a");
+        if($(window).innerWidth() < 751){
+            $(nav_btn).on("click", function(){
+                $(this).parents(".nav_wrap").hasClass("active");
+                $(this).parents(".nav_wrap").removeClass("active");
+                $(this).parents(".nav_wrap").stop().fadeOut();
+                $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
+                $("body").css("overflow","initial");
+            });
+        }
+        $(window).on("resize", function(){           
+            if($(window).innerWidth() < 751){    
+                $(nav_btn).parents(".nav_wrap").hide();
+                $(".nav_m_btn").show();   
+                $(nav_btn).on("click", function(){
+                    $(this).parents(".nav_wrap").hasClass("active");
+                    $(this).parents(".nav_wrap").removeClass("active");
+                    $(this).parents(".nav_wrap").stop().fadeOut();
+                    $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
+                    $("body").css("overflow","initial");
+                });
+            } else if ($(window).innerWidth() > 751) {
+                $(nav_btn).parents(".nav_wrap").show();
+                $(nav_btn).on("click", function(){
+                    $(this).parents(".nav_wrap").hasClass("active");
+                    $(this).parents(".nav_wrap").removeClass("active");
+                    $(this).parents(".nav_wrap").stop().show();
+                })
+            }
+        });
 
     //상단 이동 버튼
     $(window).scroll(function(){
