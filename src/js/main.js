@@ -94,6 +94,9 @@ $(document).ready(function(){
                 ease: Power3.easeOut
             });
             $(section_idx).addClass("open");
+            $("body, html").animate({
+                scrollTop: $(".intro2").height()
+            },1000);
         });
         if($(window).innerWidth() < 751) {
             $(this).on("click",function(e){
