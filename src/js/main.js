@@ -116,7 +116,6 @@ $(document).ready(function(){
             if($(window).innerWidth() > 751) {
                 $(".intro2 .section_list > li").removeClass("active");             
                 $(".intro2 .section_list > li").width("33.33%");
-                $(".main").children(".section").removeClass("open");
                 $(".intro2 .section_list > li").on("click",function(e){
                     e.preventDefault();
                     $(".intro2 .section_list > li").removeClass("active");
@@ -136,7 +135,6 @@ $(document).ready(function(){
             } else  if($(window).innerWidth() < 751){
                 $(".intro2 .section_list > li").removeClass("active");
                 $(".intro2 .section_list > li").width("100%");
-                $(".main").children(".section").removeClass("open");
                 $(".intro2 .section_list > li").on("click",function(e){
                     e.preventDefault();
                     $(".intro2 .section_list > li").removeClass("active");
