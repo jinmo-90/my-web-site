@@ -36,10 +36,50 @@
          url('../font/NotoSansKR-Bold.woff') format('woff'),
          url('../font/NotoSansKR-Bold.otf') format('opentype'),
   }
-
+  @font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: 
+    local('Pretendard Bold'), 
+    url('../font/Pretendard-Bold.woff2') format('woff2'), 
+    url('../font/Pretendard-Bold.woff') format('woff'),
+    url('../font/Pretendard-Bold.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src: 
+    local('Pretendard Medium'), 
+    url('../font/Pretendard-Medium.woff2') format('woff2'), 
+    url('../font/Pretendard-Medium.woff') format('woff'),
+    url('../font/Pretendard-Medium.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: 
+    local('Pretendard Regular'), 
+    url('../font/Pretendard-Regular.woff2') format('woff2'), 
+    url('../font/Pretendard-Regular.woff') format('woff'),
+    url('../font/Pretendard-Regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: 
+    local('Pretendard Light'), 
+    url('../font/Pretendard-Light.woff2') format('woff2'), 
+    url('../font/Pretendard-Light.woff') format('woff'),
+    url('../font/Pretendard-Light.otf') format('opentype');
+  }
 /* reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0;box-sizing: border-box; word-break: keep-all;}
-body,button,input,select,table,textarea{font-family:'NotoSansKR',Arial,sans-serif;font-size:1em;font-weight:400;color:#000;line-height:1.3;letter-spacing: -0.08em}
+body,button,input,select,table,textarea{font-family:'Pretendard','NotoSansKR',Arial,sans-serif;font-size:1em;font-weight:400;color:#000;line-height:1.3;letter-spacing: -0.04em}
 html{height:100%; }
 body{height:100%;-webkit-text-size-adjust:none}
 button,fieldset,img{border:0 none}

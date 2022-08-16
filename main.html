@@ -7,6 +7,10 @@
     <title>진모's 포트폴리오</title>
     <!-- 라이브러리 -->
     <script src="libs/js/jquery-1.10.2.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="libs/js/slick.min.js"></script>
+    <link rel="stylesheet" href="libs/css/slick.css">
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="libs/js/jquery.easypiechart.min.js"></script>
@@ -21,7 +25,7 @@
 </head>
 <body>
     <div class="wrap">
-        <header>
+        <!-- <header>
             <div class="header_inner">
                 <h1 class="blind">김진모 포트폴리오</h1>
                 <div class="nav_wrap">
@@ -36,30 +40,65 @@
                 </div>
                 <button class="nav_m_btn"><span></span><span></span><span></span></button>
             </div>
-        </header>
+        </header> -->
         <article class="main">
-            <section class="intro">
+            <section class="intro" style="display:none;">
                 <svg viewBox="0 0 1320 300">
                     <text x="50%" y="50%" dy="40px" text-anchor="middle">Kim Jin Mo</text>
                 </svg>
             </section>
+            <section class="intro2">
+                <div class="section_list_wrap">
+                    <ul class="section_list">
+                        <li>
+                            <a href="javascript:;"><span data-aos-anchor=".intro2" data-aos="zoom-in-down" data-aos-duration="3000">Profile</span></a>
+                            <div class="deem"></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><span data-aos-anchor=".intro2"  data-aos="zoom-in-down" data-aos-duration="3000">Skill</span></a>
+                            <div class="deem"></div>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><span data-aos-anchor=".intro2"  data-aos="zoom-in-down" data-aos-duration="3000">Works</span></a>
+                            <div class="deem"></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section class="section profile" id="profile">
                 <h2 class="section_tit">Profile</h2>
                 <div class="inner">
-                    <figure class="img_wrap">
-                        <img src="src/img/img_profile.jpg" alt="프로필 사진">
-                    </figure>
+                   
                     <div class="txt_wrap">
-                        <p>
+                        <div class="txt_box">
+                            <h3 class="pro_tit_01"></h3>                          
+                        </div>
+                        <p class="desc">
                             도전과 문제 해결을 좋아하는 개발자 <span class="b">김진모</span> 입니다.<br/>
                             <br/>
                             저의 목표는 <span class="b">사용자</span>의 <span class="b">니즈(needs)</span>에 맞는 최적화 된 웹사이트를 만드는 것 입니다.<br/>
                             <br/>
-                            이를 위해 웹 개발자로서의 안목을 높이고자 <br/> 공부하는 자세로 수 많은 웹 사이트를 접하고,<br/> 코드를 분석하며 제 것으로 만들기 위해 노력 하고 있습니다.<br/>
+                        </p>
+                        <div class="txt_box">
+                            <h3 class="pro_tit_02"></h3>                          
+                        </div>
+                        <p class="desc">
+                            웹 퍼블리셔로서 공공기관을 대상으로 웹사이트를 구축 및 유지 &middot; 보수를 전문으로 하는 <span class="b">웹 에이전시</span>에서 1년간 경력을 쌓았습니다.
+                        </p>
+                        <div class="txt_box">
+                            <h3 class="pro_tit_03"></h3>                        
+                        </div>
+                        <p class="desc">
+                            공공기관을 대상으로 하는 웹사이트 프로젝트를 진행하다 보니 몸이 풀편하신 분들에게도 <span class="b">정보제공</span>을 해야하는 특수성 때문에 웹 접근성에 대한 작업을 좀 더 신경 써서 작업을 진행하였습니다.
+                        </p>
+                        <div class="txt_box">
+                            <h3 class="pro_tit_04"></h3>                        
+                        </div>
+                        <p class="desc">
+                            웹 개발자로서의 안목을 높이고자 공부하는 자세로 수 많은 웹 사이트를 접하고, 코드를 분석하며 제 것으로 만들기 위해 노력 하고 있습니다.<br/>
                             <br/>
-                            사용자가 원하는 웹 사이트란 웹 사이트의 <span class="b">목적</span>에 맞는 필요한 요소만을 재료로 사용하여 <br/><span class="b">직관적</span>이며 빠르고, 모든 이들이 이용할 수 있는 것이라고 생각합니다.<br/>
+                            사용자가 원하는 웹 사이트란 웹 사이트의 <span class="b">목적</span>에 맞는 필요한 요소만을 재료로 사용하여 <span class="b">직관적</span>이며 빠르고, 모든 이들이 이용할 수 있는 것이라고 생각합니다.<br/>
                             <br/>
-                            1년 이라는 기간동안 <span class="b">퍼블리셔</span>로서, 공공기관 전문 <span class="b">웹에이전시</span>에 근무하며 경력을 쌓았습니다.<br/>
                             이제는 더 나아가 <span class="b">프론트개발자</span>로서 더 많은 경험을 쌓고자 새로운 도전을 하려고 합니다.<br/>
                             <br/>
                             현실에 안주하지 않고 늘 발전해 나가는 개발자가 되기 위해 노력하겠습니다.<br/>
@@ -162,104 +201,137 @@
             <section class="section work" id="work">
                 <h2 class="section_tit">Works</h2>
                 <div class="inner">
-                    <div class="work_slide_wrap">
-                        <ul class="work_slide">
-                            <li class="panel">
+                    <div class="work_slide_wrap swiper">
+                        <ul class="work_slide swiper-wrapper">
+                            <li class="panel swiper-slide kstartup">
                                 <div class="panel_inner">  
                                     <h3 class="work_tit"><span class="blind">k-startup</span></h3>
-                                    <div class="desc_box">
-                                        <ul>
-                                            <li>창업진흥원 K-Startup</li>
-                                            <li>2021.06~2021.12(7개월)</li>
-                                            <li> 프로젝트 서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 30%)</li>
-                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
-                                        </ul>
-                                        <a href="https://www.k-startup.go.kr/#main-section_1" target="_blank">View</a>            
+                                    <div class="con_wrap">
+                                        <span class="img_wrap">
+                                            <img src="src/img/img_works_item_01.png" class="pc" alt="창업진흥원 작업물">
+                                            <img src="src/img/img_works_item_mo_01.png" class="mobile" alt="창업진흥원 작업물(모바일)">
+                                        </span>
+                                        <div class="desc_box">
+                                            <ul>
+                                                <li>창업진흥원 K-Startup</li>
+                                                <li>2021 . 06 ~ 2021 . 12 (7개월)</li>
+                                                <li>프로젝트 서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 30%)</li>
+                                                <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                            </ul>
+                                            <a href="https://www.k-startup.go.kr/#main-section_1" target="_blank">View</a>            
+                                        </div>
+                                        <div class="bg"></div>
                                     </div>
-                                   
                                 </div>                     
                             </li>
-                            <li class="panel">
+                            <li class="panel swiper-slide tdoctor">
                                 <div class="panel_inner">  
                                     <h3 class="work_tit"><span class="blind">기술닥터</span></h3>
-                                    <div class="desc_box">
-                                        <ul>
-                                            <li>기술닥터</li>
-                                            <li>2021.06~2021.10(5개월)</li>
-                                            <li>프로젝트 전반적인 퍼블리싱 담당 ( 프로젝트 담당 비율 : 90% )</li>
-                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li> 
-                                        </ul>
-                                        <a href="https://tdoctor.gtp.or.kr/tdoctor/main/index.do" target="_blank">View</a>
+                                    <div class="con_wrap">
+                                        <span class="img_wrap">
+                                            <img src="src/img/img_works_item_02.png" class="pc" alt="기술닥터 작업물">
+                                            <img src="src/img/img_works_item_mo_02.png" class="mobile" alt="기술닥터 작업물(모바일)">
+                                        </span>
+                                        <div class="desc_box">
+                                            <ul>
+                                                <li>기술닥터</li>
+                                                <li>2021.06 ~ 2021.10 (5개월)</li>
+                                                <li>프로젝트 전반적인 퍼블리싱 담당 ( 프로젝트 담당 비율 : 90% )</li>
+                                                <li>사용언어 : HTML, CSS, javascript, JQuery</li> 
+                                            </ul>
+                                            <a href="https://tdoctor.gtp.or.kr/tdoctor/main/index.do" target="_blank">View</a>
+                                        </div>
+                                        <div class="bg"></div>
                                     </div>                                    
                                 </div>
                             </li>
-                            <li class="panel">
+                            <li class="panel swiper-slide mapo">
                                 <div class="panel_inner">  
                                     <h3 class="work_tit"><span class="blind">마포복지재단</span></h3>
-                                    <div class="desc_box">
-                                        <ul>
-                                            <li>마포복지재단</li>
-                                            <li>2022.02~2022.04(3개월)</li>
-                                            <li>프로젝트 메인 ,서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 50%)</li>
-                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
-                                        </ul>                                     
-                                        <a href="http://www.mapowf.or.kr/mwf/main/index.do" target="_blank">View</a>
+                                    <div class="con_wrap">
+                                        <span class="img_wrap">
+                                            <img src="src/img/img_works_item_03.png" class="pc" alt="마포복지재단 작업물">
+                                            <img src="src/img/img_works_item_mo_03.png" class="mobile" alt="마포복지재단 작업물(모바일)">
+                                        </span>
+                                        <div class="desc_box">
+                                            <ul>
+                                                <li>마포복지재단</li>
+                                                <li>2022.02 ~ 2022.04 (3개월)</li>
+                                                <li>프로젝트 메인 ,서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 50%)</li>
+                                                <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                            </ul>                                     
+                                            <a href="http://www.mapowf.or.kr/mwf/main/index.do" target="_blank">View</a>
+                                        </div>
+                                        <div class="bg"></div>
                                     </div>
-                                    
                                 </div>
                             </li>
-                            <li class="panel">
+                            <li class="panel swiper-slide gri">
                                 <div class="panel_inner">  
                                     <h3 class="work_tit"><span class="blind">경기연구원</span></h3>
-                                    <div class="desc_box">
-                                        <ul>
-                                            <li>경기연구원</li>
-                                            <li>2022.03~2022.08(6개월)</li>
-                                            <li>프로젝트 서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 30%)</li>
-                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
-                                        </ul>
-                                        <a href="https://www.gri.re.kr/web/main/index.do" target="_blank">View</a>
+                                    <div class="con_wrap">
+                                        <span class="img_wrap">
+                                            <img src="src/img/img_works_item_04.png" class="pc" alt="경기연구원 작업물">
+                                            <img src="src/img/img_works_item_mo_04.png" class="mobile" alt="경기연구원 작업물(모바일)">
+                                        </span>
+                                        <div class="desc_box">
+                                            <ul>
+                                                <li>경기연구원</li>
+                                                <li>2022.03~2022.08(6개월)</li>
+                                                <li>프로젝트 서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 30%)</li>
+                                                <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                            </ul>
+                                            <a href="https://www.gri.re.kr/web/main/index.do" target="_blank">View</a>
+                                        </div>
+                                        <div class="bg"></div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="panel last">
+                            <li class="panel last swiper-slide dmr">
                                 <div class="panel_inner">  
                                     <h3 class="work_tit"><span class="blind">꿈마루</span></h3>
-                                    <div class="desc_box">
-                                        <ul>
-                                            <li>꿈마루</li>
-                                            <li>2022.05~2022.07(3개월)</li>
-                                            <li>프로젝트 메인 ,서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 50%)</li>
-                                            <li>사용언어 : HTML, CSS, javascript, JQuery</li>
-                                        </ul>
-                                        <a href="https://www.dreammaru.or.kr/www/index.do" target="_blank">View</a>
+                                    <div class="con_wrap">
+                                        <span class="img_wrap">
+                                            <img src="src/img/img_works_item_05.png" class="pc" alt="꿈마루 작업물">
+                                            <img src="src/img/img_works_item_mo_05.png" class="mobile" alt="꿈마루 작업물(모바일)">
+                                        </span>
+                                        <div class="desc_box">
+                                            <ul>
+                                                <li>꿈마루</li>
+                                                <li>2022.05 ~ 2022.07 (3개월)</li>
+                                                <li>프로젝트 메인 ,서브페이지 퍼블리싱 담당 ( 프로젝트 담당 비율 : 50%)</li>
+                                                <li>사용언어 : HTML, CSS, javascript, JQuery</li>
+                                            </ul>
+                                            <a href="https://www.dreammaru.or.kr/www/index.do" target="_blank">View</a>
+                                        </div>
+                                        <div class="bg"></div>
                                     </div>
                                 </div>
-                            </li>
-                           
+                            </li>                          
                         </ul>
+                       
+                    </div>
+                    <div class="control_wrap">
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
-            <section class="section contact" id="contact">
+            <section class="contact" id="contact">
                 <h2 class="section_tit">Contact</h2>
                 <div class="inner">
-                    <span class="img_wrap">
-                        <img src="src/img/img_contact.jpg" alt="">
-                    </span>
                     <div class="desc_wrap">
                         <ul class="contact_list">
                             <li>
-                                <span>tel. </span> 010-3401-8008
+                                010-3401-8008
                             </li>
-                            <li><span>mail. </span> sonek3003@naver.com</li>
-                            <li><span>address.</span> 경기도 군포시 산본동</li>
+                            <li>sonek3003@naver.com</li>
+                            <li>경기도 군포시 산본동</li>
                         </ul>
                     </div>
                     <div class="map_wrap">
                         <div id="map" class="map"></div>
                     </div>
-                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ead2417cd69a726f63ceb44dab9ecb0"></script>
+                    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ead2417cd69a726f63ceb44dab9ecb0"></script>
                     <script>
                         var mapContainer = document.getElementById('map'),
                             mapOption = { 
@@ -267,7 +339,7 @@
                                 level: 5
                             };                                              
                         var map = new kakao.maps.Map(mapContainer, mapOption); 
-                        </script>
+                        </script> -->
                 </div>
             </section>
             <button type="button" class="btn_top"><span class="blind"> 맨위로 가기</span></button>
