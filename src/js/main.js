@@ -87,13 +87,13 @@ $(document).ready(function(){
                 width: "20%",
                 ease: Power3.easeOut
             });
-            $(".main").children(".section").stop().fadeOut();
+            $(".main").children(".section").fadeOut();
             $(this).addClass("active");
             TweenMax.to($(this), 1.5, {
                 width: "60%",
                 ease: Power3.easeOut
             });
-            $(section_idx).stop().fadeIn();
+            $(section_idx).fadeIn();
         });
         if($(window).innerWidth() < 751) {
             $(this).on("click",function(e){
@@ -103,7 +103,7 @@ $(document).ready(function(){
                     width: "100%",
                     ease: Power3.easeOut
                 });
-                $(".main").children(".section").stop().fadeOut();
+                $(".main").children(".section").fadeOut();
                 $(this).addClass("active");
                 TweenMax.to($(this), 1.5, {
                     width: "100%",
@@ -116,7 +116,7 @@ $(document).ready(function(){
             if($(window).innerWidth() > 751) {
                 $(".intro2 .section_list > li").removeClass("active");             
                 $(".intro2 .section_list > li").width("33.33%");
-                $(".main").children(".section").stop().fadeOut();
+                $(".main").children(".section").fadeOut();
                 $(".intro2 .section_list > li").on("click",function(e){
                     e.preventDefault();
                     $(".intro2 .section_list > li").removeClass("active");
@@ -136,7 +136,7 @@ $(document).ready(function(){
             } else  if($(window).innerWidth() < 751){
                 $(".intro2 .section_list > li").removeClass("active");
                 $(".intro2 .section_list > li").width("100%");
-                $(".main").children(".section").stop().fadeOut();
+                $(".main").children(".section").fadeOut();
                 $(".intro2 .section_list > li").on("click",function(e){
                     e.preventDefault();
                     $(".intro2 .section_list > li").removeClass("active");
