@@ -113,7 +113,7 @@ $(document).ready(function(){
             });
         }
         $(window).on("resize", function(){    
-            if($(window).innerWidth() > 751) {
+            if($(window).width() > 756) {
                 $(".intro2 .section_list > li").removeClass("active");             
                 $(".intro2 .section_list > li").width("33.33%");
                 $(".main").children(".section").fadeOut();
@@ -133,7 +133,7 @@ $(document).ready(function(){
 
                 });
                
-            } else  if($(window).innerWidth() < 751){
+            } else  if($(window).width() < 756){
                 $(".intro2 .section_list > li").removeClass("active");
                 $(".intro2 .section_list > li").width("100%");
                 $(".main").children(".section").fadeOut();
