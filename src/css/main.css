@@ -216,7 +216,7 @@ svg text {
 	background: url(../img/img_intro_who.jpg) no-repeat top center / cover;
 }
 .intro2 .section_list > li:nth-child(2) {
-	background: url(../img/img_intro_skill.jpg) no-repeat top right / cover;
+	background: url(../img/img_intro_skill.jpg) no-repeat top center / cover;
 }
 .intro2 .section_list > li:nth-child(3) {
 	background: url(../img/img_intro_works.jpg) no-repeat top center / cover;
@@ -692,6 +692,7 @@ svg text {
 		height: 35px;
 	}
 	.work .con_wrap {
+		width:100%;
 		margin-top:130px;
 	}
 	.work .work_slide .panel .desc_box {
