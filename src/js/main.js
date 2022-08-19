@@ -1,51 +1,4 @@
 $(document).ready(function(){
-    // 네비게이션
-    //모바일
-    $(".nav_m_btn").on("click", function(){
-        if($(this).hasClass("active")) {
-            $(this).removeClass("active");
-            $(this).parents(".header_inner").find(".nav_wrap ").hasClass("active");
-            $(this).parents(".header_inner").find(".nav_wrap ").removeClass("active");
-            $(this).parents(".header_inner").find(".nav_wrap ").stop().fadeOut();
-            $("body").css("overflow","initial");
-        } else {
-            $(this).addClass("active");
-            $(this).parents(".header_inner").find(".nav_wrap ").addClass("active");
-            $(this).parents(".header_inner").find(".nav_wrap ").stop().fadeIn();
-            $("body").css("overflow","hidden");
-        }
-    });
-    var nav_btn = $(".nav_wrap li > a");
-        if($(window).innerWidth() < 751){
-            $(nav_btn).on("click", function(){
-                $(this).parents(".nav_wrap").hasClass("active");
-                $(this).parents(".nav_wrap").removeClass("active");
-                $(this).parents(".nav_wrap").stop().fadeOut();
-                $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
-                $("body").css("overflow","initial");
-            });
-        }
-        $(window).on("resize", function(){           
-            if($(window).innerWidth() < 751){    
-                $(nav_btn).parents(".nav_wrap").hide();
-                $(".nav_m_btn").show();   
-                $(nav_btn).on("click", function(){
-                    $(this).parents(".nav_wrap").hasClass("active");
-                    $(this).parents(".nav_wrap").removeClass("active");
-                    $(this).parents(".nav_wrap").stop().fadeOut();
-                    $(this).parents(".header_inner").find(".nav_m_btn").removeClass("active");
-                    $("body").css("overflow","initial");
-                });
-            } else if ($(window).innerWidth() > 751) {
-                $(nav_btn).parents(".nav_wrap").show();
-                $(nav_btn).on("click", function(){
-                    $(this).parents(".nav_wrap").hasClass("active");
-                    $(this).parents(".nav_wrap").removeClass("active");
-                    $(this).parents(".nav_wrap").stop().show();
-                })
-            }
-        });
-
     //상단 이동 버튼
     $(window).scroll(function(){
         if($(window).scrollTop() > 90) {
@@ -64,16 +17,16 @@ $(document).ready(function(){
     });
     //인트로2
     //호버
-    $(".intro2 .section_list > li").each(function (i) {
+    $(".intro .section_list > li").each(function (i) {
         var section_idx = $(".main").find(".section").eq(i);
         // 호버
         $(this).hover(function () {
-          if (!$(".intro2").hasClass("open")) {
-            TweenMax.to($(".intro2 .section_list > li").find(".deem"), 0.7, {
+          if (!$(".intro").hasClass("open")) {
+            TweenMax.to($(".intro .section_list > li").find(".deem"), 0.7, {
               opacity: 0.6,
               ease: Power3.easeOut
             });
-            TweenMax.to($(".intro2 .section_list > li").eq(i).find(".deem"), 0.7, {
+            TweenMax.to($(".intro .section_list > li").eq(i).find(".deem"), 0.7, {
               opacity: 0,
               ease: Power3.easeOut
             });
@@ -82,8 +35,8 @@ $(document).ready(function(){
          //클릭 이벤트
         $(this).on("click",function(e){
             e.preventDefault();
-            $(".intro2 .section_list > li").removeClass("active");
-            TweenMax.to($(".intro2 .section_list > li"), 1.5, {
+            $(".intro .section_list > li").removeClass("active");
+            TweenMax.to($(".intro .section_list > li"), 1.5, {
                 width: "20%",
                 ease: Power3.easeOut
             });
@@ -95,14 +48,14 @@ $(document).ready(function(){
             });
             $(section_idx).addClass("open");
             $("body, html").animate({
-                scrollTop: $(".intro2").height()
+                scrollTop: $(".intro").height()
             },1000);
         });
         if($(window).innerWidth() < 751) {
             $(this).on("click",function(e){
                 e.preventDefault();
-                $(".intro2 .section_list > li").removeClass("active");
-                TweenMax.to($(".intro2 .section_list > li"), 1.5, {
+                $(".intro .section_list > li").removeClass("active");
+                TweenMax.to($(".intro .section_list > li"), 1.5, {
                     width: "100%",
                     ease: Power3.easeOut
                 });
@@ -117,12 +70,12 @@ $(document).ready(function(){
         }
         $(window).on("resize", function(){    
             if($(window).innerWidth() > 751) {
-                $(".intro2 .section_list > li").removeClass("active");             
-                $(".intro2 .section_list > li").width("33.33%");
-                $(".intro2 .section_list > li").on("click",function(e){
+                $(".intro .section_list > li").removeClass("active");             
+                $(".intro .section_list > li").width("33.33%");
+                $(".intro .section_list > li").on("click",function(e){
                     e.preventDefault();
-                    $(".intro2 .section_list > li").removeClass("active");
-                    TweenMax.to($(".intro2 .section_list > li"), 1.5, {
+                    $(".intro .section_list > li").removeClass("active");
+                    TweenMax.to($(".intro .section_list > li"), 1.5, {
                         width: "20%",
                         ease: Power3.easeOut
                     });
@@ -136,12 +89,12 @@ $(document).ready(function(){
                 });
                
             } else  if($(window).innerWidth() < 751){
-                $(".intro2 .section_list > li").removeClass("active");
-                $(".intro2 .section_list > li").width("100%");
-                $(".intro2 .section_list > li").on("click",function(e){
+                $(".intro .section_list > li").removeClass("active");
+                $(".intro .section_list > li").width("100%");
+                $(".intro .section_list > li").on("click",function(e){
                     e.preventDefault();
-                    $(".intro2 .section_list > li").removeClass("active");
-                    TweenMax.to($(".intro2 .section_list > li"), 1.5, {
+                    $(".intro .section_list > li").removeClass("active");
+                    TweenMax.to($(".intro .section_list > li"), 1.5, {
                         width: "100%",
                         ease: Power3.easeOut
                     });
