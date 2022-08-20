@@ -15,7 +15,7 @@ $(document).ready(function(){
             scrollTop : 0
         },500);
     });
-    //인트로2
+    //인트로
     //호버
     $(".intro .section_list > li").each(function (i) {
         var section_idx = $(".main").find(".section").eq(i);
@@ -79,13 +79,11 @@ $(document).ready(function(){
                         width: "20%",
                         ease: Power3.easeOut
                     });
-
                     $(this).addClass("active");
                     TweenMax.to($(this), 1.5, {
                         width: "60%",
                         ease: Power3.easeOut
                     });
-
                 });
                
             } else  if($(window).innerWidth() < 751){
@@ -98,13 +96,11 @@ $(document).ready(function(){
                         width: "100%",
                         ease: Power3.easeOut
                     });
-
                     $(this).addClass("active");
                     TweenMax.to($(this), 1.5, {
                         width: "100%",
                         ease: Power3.easeOut
                     });                   
-
                 });
                 
             }
@@ -117,10 +113,10 @@ $(document).ready(function(){
     const pTag3 = document.querySelector(".pro_tit_03")
     const pTag4 = document.querySelector(".pro_tit_04")
 
-    const textArr1 = "Who am i? Who am i?".split(" ")
-    const textArr2 = "My Career My Career".split(" ")
-    const textArr3 = "Web Accessibility".split(" ")
-    const textArr4 = "Objective Objective".split(" ")
+    const textArr1 = "Who am i? Who am i? Who am i? Who am i?".split(" ")
+    const textArr2 = "My Career My Career My Career".split(" ")
+    const textArr3 = "Web Accessibility Web Accessibility".split(" ")
+    const textArr4 = "Objective Objective Objective Objective".split(" ")
 
     let count1 = 0
     let count2 = 0
@@ -164,10 +160,10 @@ $(document).ready(function(){
     }
 
     function scrollHandler() {
-    count1 += 15
-    count2 += 15
-    count3 += 15
-    count4 += 15
+    count1 += 5
+    count2 += 5
+    count3 += 5
+    count4 += 5
     }
 
     window.addEventListener("scroll", scrollHandler)
@@ -239,10 +235,6 @@ $(document).ready(function(){
     var swiper = new Swiper(".work_slide_wrap", {
         spaceBetween: 30,
         centeredSlides: true,
-        autoPlay: {
-          delay: 500,
-          disableOnInteraction: false,
-        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
